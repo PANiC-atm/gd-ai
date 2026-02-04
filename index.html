@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geometry Dash Knowledge AI</title>
+</head>
+<body onload="loadFacts()">
+
+<h2>Geometry Dash AI</h2>
+<input id="q" placeholder="Why is the wave so hard?">
+<button onclick="ask()">Ask</button>
+<p id="a"></p>
+
+<script src="logic.js"></script>
+<script>
+function ask() {
+  const q = document.getElementById("q").value;
+  document.getElementById("a").innerText = think(q);
+}
+</script>
+
+</body>
+</html>
