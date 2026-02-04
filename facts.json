@@ -6,24 +6,120 @@
     "genre": "Rhythm-based platformer"
   },
   "mechanics": [
-    "Gameplay is synchronized to music",
+    "Gameplay is often synced to music",
+    "Not all levels sync to music",
     "Levels require precise timing",
     "Players must avoid obstacles in one attempt"
   ],
   "modes": {
     "cube": "Basic jumping mode",
     "ship": "Flying mode affected by gravity",
-    "wave": "Fast zigzag movement, very sensitive to input",
-    "ball": "Gravity switching mode"
+    "ball": "Clicking flips gravity",
+    "ufo": "Flappy Bird-like gameplay",
+    "wave": "Zigzag movement",
+    "robot": "Holding increases jump height",
+    "spider": "Clicking teleports the player vertically",
+    "swing": "Clicking flips gravity mid-air"
   },
   "difficulty": {
     "easy": "Slow speeds and simple patterns",
+    "normal": "Slightly harder, but still simple",
+    "hard": "Patterns start to get complex",
+    "harder": "Challenging patterns and fast speeds",
+    "insane": "Real challenges, once the hardest difficulty",
     "demon": "Extremely precise and fast gameplay",
-    "extreme_demon": "The hardest community-made levels"
+    "easy demon": "high speeds and difficult patterns",
+    "medium demon": "A step up from easy demon, often featuring tight gameplay",
+    "hard demon": "Gameplay with precises clicks, often needing days of practice",
+    "insane demon": "Extremely precise clicks pushing mechanics to the max",
+    "extreme_demon": "Precision is required, one mis-click can mean failure"
+    "top 1": "An unofficial difficulty featuring the hardest levels made, every click has to be perfect in these levels",
+    "impossible": "Levels that are impossible, these levels were uploaded to the servers using hacks and have never been beaten"
   },
   "community": [
     "Players can create and upload custom levels",
     "Difficulty is voted on by the community",
+    "The demon list, or Pointercrate, is a list of demon levels ranked by how difficult they are",
     "Extreme Demons are verified by top players"
   ]
+
+  "bugs": {
+    "flipped_gravity_ship": {
+      "description": "Up until update 2.2, ship physics were different if the gravity was flipped, this is still present in levels made before update 2.2 and levels that enable legacy ship controls",
+      "impact": "Makes ship sections more difficult",
+      "status": "Fixed issue"
+    },
+    "hitboxes": {
+      "description": "Some of the game's hitboxes are extremely weird and unexpected, like the spike having only a single small rectangle at the tip of the spike.",
+      "impact": "Gives unexpected results",
+      "status": "Known issue"
+    },
+  
+  "demons": {
+    "easy": [
+      "The Nightmare",
+      "Lightning Road",
+      "Platinum Adventure",
+      "iSpyWithMyLittleEye",
+      "Change of Scene",
+      "Demon Mixed",
+      "Bloudebafe",
+      "Impulse",
+      "White Space",
+      "Hold On",
+      "Absolute Garbage",
+      "Fantasy Lux",
+      "Flares",
+      "Demon Park",
+      "Invisible Clubstep",
+      "Spark",
+      "Speed Racer",
+      "X",
+      "Button Masher",
+      "Dear Nostalgists",
+      "Sidestep",
+      
+    ],
+    "medium": [
+      "B",
+      "Mechanical Showdown",
+      "Noel Electra",
+      "Living Open",
+      "MasterGame",
+      "Path Walker",
+    ],
+    "hard": [
+      "Nine Circles",
+      "Jawbreaker",
+      "Future Funk",
+      "Fire Temple",
+      "Into the Towerverse"
+    ],
+    "insane": [
+      "Windy Landscape",
+      "Magma Bound",
+      "Denouement",
+    ]
+  },
+
+  "popular_levels": {
+    "extreme": [
+      "Bloodbath",
+      "Slaughterhouse",
+      "Tartarus",
+      "Tidal Wave",
+      "Amethyst",
+      "Bloodlust",
+      "The Golden",
+      "Sonic Wave",
+      "Sonic Wave Infinity",
+      "Sonic Wave Rebirth",
+      "Ashley Wave Trials"
+    ],
+    "classic": [
+      "Clubstep",
+      "Theory of Everything 2",
+      "Deadlocked"
+    ]
+  }
 }
