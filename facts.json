@@ -1,0 +1,29 @@
+{
+  "game": {
+    "name": "Geometry Dash",
+    "creator": "RobTop Games",
+    "release_year": 2013,
+    "genre": "Rhythm-based platformer"
+  },
+  "mechanics": [
+    "Gameplay is synchronized to music",
+    "Levels require precise timing",
+    "Players must avoid obstacles in one attempt"
+  ],
+  "modes": {
+    "cube": "Basic jumping mode",
+    "ship": "Flying mode affected by gravity",
+    "wave": "Fast zigzag movement, very sensitive to input",
+    "ball": "Gravity switching mode"
+  },
+  "difficulty": {
+    "easy": "Slow speeds and simple patterns",
+    "demon": "Extremely precise and fast gameplay",
+    "extreme_demon": "The hardest community-made levels"
+  },
+  "community": [
+    "Players can create and upload custom levels",
+    "Difficulty is voted on by the community",
+    "Extreme Demons are verified by top players"
+  ]
+}
