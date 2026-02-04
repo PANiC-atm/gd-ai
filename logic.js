@@ -21,7 +21,7 @@ function think(question) {
     );
   }
 
-  if (question.includes("wave")) {
+  if (question.includes("wave") && question.includes("difficult")) {
     response.push(
       `The wave mode is considered difficult because it uses ${facts.modes.wave.toLowerCase()}, making mistakes very punishing.`
     );
@@ -31,6 +31,33 @@ function think(question) {
     response.push(
       `The Geometry Dash community is important because ${facts.community.join(", ").toLowerCase()}.`
     );
+  }
+
+    // BUGS
+  if (question.includes("bug") || question.includes("glitch")) {
+    for (const bug in facts.bugs) {
+      responses.push(
+        `A known bug is ${facts.bugs[bug].description.toLowerCase()}, which ${facts.bugs[bug].impact.toLowerCase()}.`
+      );
+    }
+  }
+
+  // DEMONS BY DIFFICULTY
+  for (const difficulty in facts.demons) {
+    if (question.includes(difficulty)) {
+      responses.push(
+        `Popular ${difficulty} demons include: ${facts.demons[difficulty].join(", ")}.`
+      );
+    }
+  }
+
+  // POPULAR LEVELS
+  if (question.includes("popular") || question.includes("famous")) {
+    for (const category in facts.popular_levels) {
+      responses.push(
+        `Some ${category} levels are: ${facts.popular_levels[category].join(", ")}.`
+      );
+    }
   }
 
   if (response.length === 0) {
