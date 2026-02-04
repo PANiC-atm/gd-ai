@@ -1,20 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Geometry Dash Knowledge AI</title>
+<meta charset="UTF-8">
+<title>Geometry Dash AI</title>
+
+<style>
+/* Geometry Dash Font */
+@font-face {
+  font-family: "GeometryDash";
+  src: url("geometry_dash.ttf");
+}
+
+/* Page background */
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("GD_AI_BG.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Main container */
+.ai-container {
+  width: 420px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 25px #00ffff88;
+}
+
+/* Title */
+.ai-title {
+  font-family: "GeometryDash", Arial, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px cyan;
+}
+
+/* Output text */
+#answer {
+  min-height: 80px;
+  padding: 10px;
+  background: #000;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Input field */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: cyan;
+  color: black;
+}
+
+button:hover {
+  background: #00cccc;
+}
+</style>
 </head>
+
 <body onload="loadFacts()">
 
-<h2>Geometry Dash AI</h2>
-<input id="q" placeholder="Why is the wave so hard?">
-<button onclick="ask()">Ask</button>
-<p id="a"></p>
+<div class="ai-container">
+  <div class="ai-title">Geometry Dash AI</div>
+
+  <div id="answer">Ask me something about Geometry Dash.</div>
+
+  <input
+    id="question"
+    type="text"
+    placeholder="Why is the wave so hard?"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+  >
+
+  <button onclick="ask()">Ask</button>
+</div>
 
 <script src="logic.js"></script>
 <script>
 function ask() {
-  const q = document.getElementById("q").value;
-  document.getElementById("a").innerText = think(q);
+  const q = document.getElementById("question").value;
+  document.getElementById("answer").innerText = think(q);
 }
 </script>
 
